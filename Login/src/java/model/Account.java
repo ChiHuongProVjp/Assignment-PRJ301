@@ -7,26 +7,45 @@ package model;
 
 /**
  *
- * @author SAP-LAP-FPT
+ * @author Sap-lap
  */
 public class Account {
-    private String username;
-    private String password;
+    private String taikhoan;
+    private String matkhau;
+    private String tentaikhoan;
 
-    public String getUsername() {
-        return username;
+    public Account() {
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public Account(String taikhoan, String matkhau, String tentaikhoan) {
+        this.taikhoan = taikhoan;
+        this.matkhau = matkhau;
+        this.tentaikhoan = tentaikhoan;
     }
 
-    public String getPassword() {
-        return password;
+    public String getTaikhoan() {
+        return taikhoan;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public void setTaikhoan(String taikhoan) {
+        this.taikhoan = taikhoan;
     }
+
+    public String getMatkhau() {
+        return matkhau;
+    }
+
+    public void setMatkhau(String matkhau) {
+        this.matkhau = matkhau;
+    }
+
+    public String getTentaikhoan() {
+        return tentaikhoan;
+    }
+
+    public void setTentaikhoan(String tentaikhoan) {
+        this.tentaikhoan = tentaikhoan;
+    }
+    
     
 }

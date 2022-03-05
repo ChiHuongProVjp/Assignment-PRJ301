@@ -4,27 +4,23 @@
  * and open the template in the editor.
  */
 package dal;
-
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import model.Account;
-import model.Department;
 
 /**
  *
- * @author SAP-LAP-FPT
+ * @author Sap-lap
  */
 public class AccountDBContext extends DBContext {
-    public Account getAccount(String username,String password)
+    public Account getAccount(String username, String password)
     {
         try {
-            String sql = "SELECT [username]\n" +
-                        "      ,[password]\n" +
-                        "  FROM [Account] WHERE username = ? AND [password] = ?";
+            String sql = "SELECT TaiKhoan, MatKhau, TenTaiKhoan FROM dbo.QuanLy\n" +
+                            "WHERE TaiKhoan = ? AND MatKhau = ?";
             PreparedStatement stm = connection.prepareStatement(sql);
             stm.setString(1, username);
             stm.setString(2, password);
@@ -32,8 +28,9 @@ public class AccountDBContext extends DBContext {
             if(rs.next())
             {
                 Account account = new Account();
-                account.setUsername(rs.getString("username"));
-                account.setPassword(rs.getString("password"));
+                account.setTaikhoan(rs.getString("taikhoan"));
+                account.setMatkhau(rs.getString("matkhau"));
+                account.setTentaikhoan(rs.getString("tentaikhoan"));
                 return account;
             }
         } catch (SQLException ex) {

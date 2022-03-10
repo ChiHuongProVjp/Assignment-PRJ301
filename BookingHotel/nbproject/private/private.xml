@@ -3,17 +3,22 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/Java/BookingHotel/src/java/DTO/Account.java</file>
-            <file>file:/D:/Java/BookingHotel/src/java/DAO/Room.java</file>
-            <file>file:/D:/Java/BookingHotel/src/java/Servelet/loginServlet.java</file>
-            <file>file:/D:/Java/BookingHotel/src/java/Servelet/index.java</file>
-            <file>file:/D:/Java/BookingHotel/src/java/Servelet/logoutServet.java</file>
-            <file>file:/D:/Java/BookingHotel/src/java/DAO/AccountDAO.java</file>
-            <file>file:/D:/Java/BookingHotel/web/WEB-INF/blog-single.html</file>
-            <file>file:/D:/Java/BookingHotel/src/java/DBUtils/DBConnection.java</file>
-            <file>file:/D:/Java/BookingHotel/nbproject/build-impl.xml</file>
-            <file>file:/D:/Java/BookingHotel/web/WEB-INF/royal-Doc/css/main.css</file>
-            <file>file:/D:/Java/BookingHotel/src/java/Servelet/registerServlet.java</file>
+            <file>file:/C:/Users/Admin/Desktop/Assignment-PRJ301/BookingHotel/web/WEB-INF/image/about_banner.jpg</file>
+            <file>file:/C:/Users/Admin/Desktop/Assignment-PRJ301/BookingHotel/web/WEB-INF/image/facilites_bg.jpg</file>
+            <file>file:/C:/Users/Admin/Desktop/Assignment-PRJ301/BookingHotel/web/WEB-INF/image/room3.jpg</file>
+            <file>file:/C:/Users/Admin/Desktop/Assignment-PRJ301/BookingHotel/web/WEB-INF/css/bootstrap.css</file>
+            <file>file:/C:/Users/Admin/Desktop/Assignment-PRJ301/BookingHotel/web/WEB-INF/image/favicon.png</file>
+            <file>file:/C:/Users/Admin/Desktop/Assignment-PRJ301/BookingHotel/web/WEB-INF/image/banner_bg.jpg</file>
+            <file>file:/C:/Users/Admin/Desktop/Assignment-PRJ301/BookingHotel/web/WEB-INF/image/testtimonial-2.jpg</file>
+            <file>file:/C:/Users/Admin/Desktop/Assignment-PRJ301/BookingHotel/web/WEB-INF/contact.html</file>
+            <file>file:/C:/Users/Admin/Desktop/Assignment-PRJ301/BookingHotel/web/WEB-INF/image/room1.jpg</file>
+            <file>file:/C:/Users/Admin/Desktop/Assignment-PRJ301/BookingHotel/web/WEB-INF/image/Logo.png</file>
+            <file>file:/C:/Users/Admin/Desktop/Assignment-PRJ301/BookingHotel/web/WEB-INF/about.html</file>
+            <file>file:/C:/Users/Admin/Desktop/Assignment-PRJ301/BookingHotel/web/WEB-INF/image/logo-2.png</file>
+            <file>file:/C:/Users/Admin/Desktop/Assignment-PRJ301/BookingHotel/web/WEB-INF/image/room2.jpg</file>
+            <file>file:/C:/Users/Admin/Desktop/Assignment-PRJ301/BookingHotel/web/WEB-INF/image/about_bg.jpg</file>
+            <file>file:/C:/Users/Admin/Desktop/Assignment-PRJ301/BookingHotel/web/WEB-INF/image/room4.jpg</file>
+            <file>file:/C:/Users/Admin/Desktop/Assignment-PRJ301/BookingHotel/web/WEB-INF/image/testtimonial-1.jpg</file>
         </group>
     </open-files>
 </project-private>

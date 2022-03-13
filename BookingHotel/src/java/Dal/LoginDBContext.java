@@ -29,7 +29,7 @@ public class LoginDBContext {
                     + "      ,[password]\n"
                     + "      ,[customerID]\n"
                     + "  FROM [BookingHotel].[dbo].[customeraccount]\n"
-                    + "  Where [username] = '"+name+"' and [password] = '"+pass+"'");
+                    + "  Where [username] = '" + name + "' and [password] = '" + pass + "'");
             ps.setString(1, name);
             ps.setString(2, pass);
 

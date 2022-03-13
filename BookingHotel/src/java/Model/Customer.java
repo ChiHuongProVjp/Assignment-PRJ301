@@ -10,6 +10,28 @@ package Model;
  * @author DINH
  */
 public class Customer {
+    
+      //declare variables
+    private int customerId;
+    private String fullName;
+    private String address;
+    private String email;
+    private int gender;
+    private String phone;
+    private int status;
+
+    public Customer() {
+    }
+
+    public Customer(int customerId, String fullName, String address, String email, int gender, String phone, int status) {
+        this.customerId = customerId;
+        this.fullName = fullName;
+        this.address = address;
+        this.email = email;
+        this.gender = gender;
+        this.phone = phone;
+        this.status = status;
+    }
 
     public int getCustomerId() {
         return customerId;
@@ -67,26 +89,8 @@ public class Customer {
         this.status = status;
     }
 
-    public Customer(int customerId, String fullName, String address, String email, int gender, String phone, int status) {
-        this.customerId = customerId;
-        this.fullName = fullName;
-        this.address = address;
-        this.email = email;
-        this.gender = gender;
-        this.phone = phone;
-        this.status = status;
-    }
 
-    public Customer() {
-    }
 
-  //declare variables
-    private int customerId;
-    private String fullName;
-    private String address;
-    private String email;
-    private int gender;
-    private String phone;
-    private int status;
+
 
 }

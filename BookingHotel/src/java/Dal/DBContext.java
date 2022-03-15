@@ -6,7 +6,7 @@ import java.sql.SQLException;
 
 /**
  *
- * @author admin
+ * @author Admin
  */
 public class DBContext {
     

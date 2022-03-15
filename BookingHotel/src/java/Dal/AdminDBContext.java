@@ -1,5 +1,7 @@
 package Dal;
 
+import Model.Image;
+import Model.Room;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -9,7 +11,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author admin
+ * @author Admin
  */
 public class AdminDBContext {
     //declare variables
@@ -22,7 +24,8 @@ public class AdminDBContext {
     private ResultSet rs;
     private ResultSet rs2;
     private String query;
-
+    private ArrayList<Room> listRoom;
+    private ArrayList<Image> images;
     private String a = "";
     public AdminDBContext() throws SQLException {
         con = null;
@@ -31,7 +34,7 @@ public class AdminDBContext {
         rs = null;
         st2 = null;
         rs2 = null;
-
+        listRoom = new ArrayList<>();
         con = cn.getConnectDB();
         st = con.createStatement();
         st2 = con.createStatement();
@@ -41,7 +44,7 @@ public class AdminDBContext {
         try {
             con = cn.getConnectDB();
             PreparedStatement ps = con.prepareStatement(
-                    "SELECT [UserID],[password] FROM [booking].[dbo].[admin] WHERE [admin].[username] = '"+name+"' and [admin].[password] = '"+pass+"'");
+                    "SELECT [UserID],[password] FROM [BookingHotel].[dbo].[admin] WHERE [admin].[username] = '"+name+"' and [admin].[password] = '"+pass+"'");
             ps.setString(1, name);
             ps.setString(2, pass);
 

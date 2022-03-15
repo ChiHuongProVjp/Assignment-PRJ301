@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  *
- * @author admin
+ * @author Admin
  */
 @WebServlet("/RegisterServlet")
 public class RegisterServlet extends HttpServlet {

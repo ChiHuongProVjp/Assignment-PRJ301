@@ -2,25 +2,24 @@ package Model;
 
 /**
  *
- * @author admin
+ * @author Admin
  */
 public class CustommerAccount {
+
     private int customerID;
     private String username;
     private String password;
 
-    
-     public CustommerAccount(int customerID, String username, String password) {
+    public CustommerAccount() {
+
+    }
+
+    public CustommerAccount(int customerID, String username, String password) {
         this.customerID = customerID;
         this.username = username;
         this.password = password;
     }
-    
-    public CustommerAccount(){
-        
-    }
-    
-    
+
     public int getCustomerID() {
         return customerID;
     }
@@ -45,5 +44,4 @@ public class CustommerAccount {
         this.password = password;
     }
 
-   
 }

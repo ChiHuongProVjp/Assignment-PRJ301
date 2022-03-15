@@ -7,11 +7,11 @@ package Model;
 
 /**
  *
- * @author DINH
+ * @author Admin
  */
 public class Customer {
-    
-      //declare variables
+
+    //declare variables
     private int customerId;
     private String fullName;
     private String address;
@@ -88,9 +88,5 @@ public class Customer {
     public void setStatus(int status) {
         this.status = status;
     }
-
-
-
-
 
 }

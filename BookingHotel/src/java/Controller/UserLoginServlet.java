@@ -10,10 +10,12 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import Dal.LoginDBContext;
 
+/**
+ *
+ * @author Admin
+ */
 @WebServlet("/UserLoginServlet")
 public class UserLoginServlet extends HttpServlet {
-
-    private static final long serialVersionUID = 1L;
 
     public UserLoginServlet() {
         super();
@@ -28,10 +30,11 @@ public class UserLoginServlet extends HttpServlet {
         HttpSession session = request.getSession();
         session.setAttribute("username", username);
         LoginDBContext log = new LoginDBContext();
-         log.Login(username, password);
-        if (log!=null ) {
-            session.setAttribute("ID", log);
-            RequestDispatcher dispatcher = request.getRequestDispatcher("index.jsp");
+       String login = log.Login(username, password);
+         
+        if (login!=null ) {
+            session.setAttribute("ID", login);
+            RequestDispatcher dispatcher = request.getRequestDispatcher("indexLogin.jsp");
             dispatcher.forward(request, response);
         } else {
             RequestDispatcher dispatcher = request.getRequestDispatcher("login.jsp");

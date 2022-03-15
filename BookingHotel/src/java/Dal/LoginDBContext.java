@@ -12,7 +12,7 @@ import java.sql.SQLException;
 
 /**
  *
- * @author admin
+ * @author Admin
  */
 public class LoginDBContext {
 
@@ -29,9 +29,7 @@ public class LoginDBContext {
                     + "      ,[password]\n"
                     + "      ,[customerID]\n"
                     + "  FROM [BookingHotel].[dbo].[customeraccount]\n"
-                    + "  Where [username] = '" + name + "' and [password] = '" + pass + "'");
-            ps.setString(1, name);
-            ps.setString(2, pass);
+                    + "  Where [username] = '"+name+"' and [password] = '"+pass+"'");
 
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
@@ -48,7 +46,7 @@ public class LoginDBContext {
         try {
             con = cn.getConnectDB();
             PreparedStatement ps = con.prepareStatement(
-                    "INSERT [dbo].[customeraccount] ([username], [password]]) VALUES (?', ?)");
+                    "INSERT [dbo].[customeraccount] ([username], [password]) VALUES ('"+name+"', '"+pass+"')");
             ps.executeUpdate();
             status = true;
 

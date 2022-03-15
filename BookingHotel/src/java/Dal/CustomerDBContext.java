@@ -10,7 +10,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author admin
+ * @author Admin
  */
 public class CustomerDBContext {
 
@@ -74,7 +74,7 @@ public class CustomerDBContext {
                 + "      ,[gender]\n"
                 + "      ,[phone]\n"
                 + "      ,[status]\n"
-                + "  FROM [booking].[dbo].[customer]\n"
+                + "  FROM [BookingHotel].[dbo].[customer]\n"
                 + "  where customerId = '" + customerId + "'";
         try {
             rs = st.executeQuery(query);//execute query
@@ -102,7 +102,7 @@ public class CustomerDBContext {
                 + "      ,[gender]\n"
                 + "      ,[phone]\n"
                 + "      ,[status]\n"
-                + "  FROM [booking].[dbo].[customer]\n"
+                + "  FROM [BookingHotel].[dbo].[customer]\n"
                 + "  where customerId = '" + customerId + "'";//query sql select data
         try {
             rs = st.executeQuery(query);//execute query

@@ -6,8 +6,11 @@
 
 <%@page import="java.util.ArrayList"%>
 <%@page import="Model.Room"%>
+<%@page import="Dal.roomDBContext"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%
+    roomDBContext room = new roomDBContext();
+    ArrayList<Room> list = room.loadProduct();
 %>
 <!DOCTYPE html>
 <html>
@@ -102,7 +105,11 @@
                                             <div class="book_tabel_item">
                                                 <div class="input-group">
                                                     <select id="roomID" name="roomID" class="wide">
-                                                        
+                                                        <%
+                                                            for (int i = 0; i < list.size(); i++) {
+                                                        %>
+                                                        <option value="<%=list.get(i).getRoomId()%>"><%=list.get(i).getRoomName()%></option>
+                                                        <%}%>
                                                     </select>
                                                 </div>
 

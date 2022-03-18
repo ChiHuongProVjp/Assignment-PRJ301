@@ -16,9 +16,11 @@ import Dal.LoginDBContext;
  */
 @WebServlet("/UserLoginServlet")
 public class UserLoginServlet extends HttpServlet {
-
-    public UserLoginServlet() {
-        super();
+    
+    @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        request.getRequestDispatcher("login.jsp").forward(request, response);
     }
 
     @Override
@@ -30,9 +32,9 @@ public class UserLoginServlet extends HttpServlet {
         HttpSession session = request.getSession();
         session.setAttribute("username", username);
         LoginDBContext log = new LoginDBContext();
-       String login = log.Login(username, password);
-         
-        if (login!=null ) {
+        String login = log.Login(username, password);
+
+        if (login != null) {
             session.setAttribute("ID", login);
             RequestDispatcher dispatcher = request.getRequestDispatcher("indexLogin.jsp");
             dispatcher.forward(request, response);

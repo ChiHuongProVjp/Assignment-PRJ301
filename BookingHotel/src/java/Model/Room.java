@@ -2,7 +2,7 @@ package Model;
 
 /**
  *
- * @author admin
+ * @author Admin
  */
 public class Room {
 

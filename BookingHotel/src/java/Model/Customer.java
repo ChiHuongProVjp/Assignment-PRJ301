@@ -10,8 +10,8 @@ package Model;
  * @author Admin
  */
 public class Customer {
-
     //declare variables
+
     private int customerId;
     private String fullName;
     private String address;

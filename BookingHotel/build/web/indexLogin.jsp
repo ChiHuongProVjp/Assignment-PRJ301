@@ -38,7 +38,6 @@ ArrayList<Room> list = room.loadProduct();
             <div class="container">
                 <nav class="navbar navbar-expand-lg navbar-light">
                     <!-- Brand and toggle get grouped for better mobile display -->
-                    <a class="navbar-brand logo_h" href="index.html"><img src="image/Logo1.png" alt=""></a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
@@ -65,7 +64,7 @@ ArrayList<Room> list = room.loadProduct();
 					<div class="banner_content text-center">
 						<h6>Away from monotonous life</h6>
 						<h2>Relax Your Mind</h2>
-						<p>If you are looking at blank cassettes on the web, you may be very confused at the<br> difference in price. You may see some for as low as $.17 each.</p>
+						<p>You have successfully registered</p>
 						<a href="#" class="btn theme_btn button_hover">Get Started</a>
 					</div>
 				</div>
@@ -157,19 +156,20 @@ ArrayList<Room> list = room.loadProduct();
                 <div class="row">
                     <div class="col-lg-3  col-md-6 col-sm-6">
                         <div class="single-footer-widget">
-                            <h6 class="footer_title">King Hotell</h6>
-                            <p>Located in the heart of Hanoi Old Quarter - the most hustle and bustle city,
-                                King Hotel Hanoi shines as sparkling diamond by professional style and excellent service. 
-                                As a heaven of relaxation, King Hotel will definitely bring you the best time ever.</p>
+                                <h6 class="footer_title">Ninh Bình Legend</h6>
+                                <p>Ninh Binh Legend is a lovely hotel, in the heart of Ninh Bình. In addition to excellent transport 
+                                    links at the meeting point of the main metro line and tram line, our hotel is surrounded by the city centre’s elegant shops, cafés, 
+                                    restaurants, bars, Ninh Binh is the focus of many tourist attractions. Recently, our whole hotel has undergone a complete renovatio</p>
+                            </div>
                         </div>
-                    </div>
-                  							
-                    <div class="col-lg-3 col-md-6 col-sm-6">
-                        <div class="single-footer-widget">
-                            <h6 class="footer_title">Address</h6>
-                            <p>16 Hang Da str, Hanoi, Vietnam </p>
-                             <p>(+84) 24 79797979 | kinghotel@gmail.com </p>
-                            <div id="mc_embed_signup">
+
+                        <div class="col-lg-3 col-md-6 col-sm-6">
+                            <div class="single-footer-widget">
+                                <h6 class="footer_title">Address</h6>
+                                <p>Xuân Thành, Khu biệt thự, Ninh Bình, Việt Nam </p>
+                                <p>(+84) 09 87654321 | ninhbinhlegend@gmail.com </p>
+                            </div>
+                        </div>
                                
                             </div>
                         </div>

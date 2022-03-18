@@ -27,6 +27,12 @@ import javax.servlet.http.HttpSession;
 public class LoginAdminServlet extends HttpServlet {
 
     @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        request.getRequestDispatcher("loginAdmin.jsp").forward(request, response);
+    }
+
+    @Override
     public void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         try {
@@ -38,7 +44,7 @@ public class LoginAdminServlet extends HttpServlet {
             session.setAttribute("username", username);
             admin.Login(username, (password));
             String url = reg.getRequestURI();
-            if (admin!=null){
+            if (admin != null) {
                 session.setAttribute("login", username);
                 response.sendRedirect("roommanage.jsp");
             } else {

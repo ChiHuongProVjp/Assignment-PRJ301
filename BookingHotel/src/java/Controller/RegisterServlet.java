@@ -16,6 +16,13 @@ import javax.servlet.http.HttpServletResponse;
  */
 @WebServlet("/RegisterServlet")
 public class RegisterServlet extends HttpServlet {
+
+    @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        request.getRequestDispatcher("register.jsp").forward(request, response);
+    }
+
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -25,17 +32,17 @@ public class RegisterServlet extends HttpServlet {
         String address = request.getParameter("address");
         String email = request.getParameter("email");
         String phone = request.getParameter("phone");
-        
+
         LoginDBContext register = new LoginDBContext();
         boolean check = register.Register(username, password);
         boolean addInfor = register.InsertInfor(fullName, address, email, 1, phone, 1);
-        if(check&&addInfor){
+        if (check && addInfor) {
             RequestDispatcher dispatcher = request.getRequestDispatcher("login.jsp");
             dispatcher.forward(request, response);
-        }else{
+        } else {
             RequestDispatcher dispatcher = request.getRequestDispatcher("register.jsp");
             dispatcher.forward(request, response);
         }
-       
+
     }
 }

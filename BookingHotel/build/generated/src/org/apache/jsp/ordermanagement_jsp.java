@@ -3,13 +3,14 @@ package org.apache.jsp;
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.jsp.*;
+import Dal.CustomerDBContext;
 import Model.Order;
-import DAO.OrderDAO;
+import Dal.OrderDBContext;
 import java.util.ArrayList;
 import Model.Room;
-import DAO.roomDAO;
+import Dal.roomDBContext;
 
-public final class ordermanage_jsp extends org.apache.jasper.runtime.HttpJspBase
+public final class ordermanagement_jsp extends org.apache.jasper.runtime.HttpJspBase
     implements org.apache.jasper.runtime.JspSourceDependent {
 
   private static final JspFactory _jspxFactory = JspFactory.getDefaultFactory();
@@ -54,10 +55,12 @@ public final class ordermanage_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\n");
       out.write("\n");
       out.write("\n");
+      out.write("\n");
 
-OrderDAO order = new OrderDAO();
+OrderDBContext order = new OrderDBContext();
 ArrayList<Order> list = order.loadOder();
-roomDAO room = new roomDAO();
+roomDBContext room = new roomDBContext();
+CustomerDBContext cus = new CustomerDBContext();
 
       out.write("\n");
       out.write("<!DOCTYPE html>\n");
@@ -87,14 +90,14 @@ roomDAO room = new roomDAO();
       out.write("\n");
       out.write("        Tip 2: you can also add an image using data-image tag\n");
       out.write("    -->\n");
-      out.write("            <<div class=\"sidebar-wrapper\">\n");
+      out.write("            <div class=\"sidebar-wrapper\">\n");
       out.write("                <div class=\"logo\">\n");
-      out.write("                    <a href=\"\" class=\"simple-text\">\n");
-      out.write("                         Booking management\n");
+      out.write("                    <a href=\"user.html\" class=\"simple-text\">\n");
+      out.write("                        Booking management\n");
       out.write("                    </a>\n");
       out.write("                </div>\n");
       out.write("                <ul class=\"nav\">\n");
-      out.write("                    <li  class=\"nav-item active\">\n");
+      out.write("                    <li  class=\"nav-item\">\n");
       out.write("                        <a class=\"nav-link\" href=\"./roommanage.jsp\">\n");
       out.write("                            <i class=\"nc-icon nc-circle-09\"></i>\n");
       out.write("                            <p>Room</p>\n");
@@ -107,7 +110,7 @@ roomDAO room = new roomDAO();
       out.write("                        </a>\n");
       out.write("                    </li>\n");
       out.write("                    <li>\n");
-      out.write("                        <a class=\"nav-link\" href=\"./ordermanage.jsp\">\n");
+      out.write("                        <a class=\"nav-link active\" href=\"./ordermanagement.jsp\">\n");
       out.write("                            <i class=\"nc-icon nc-atom\"></i>\n");
       out.write("                            <p>Order</p>\n");
       out.write("                        </a>\n");
@@ -116,68 +119,116 @@ roomDAO room = new roomDAO();
       out.write("            </div>\n");
       out.write("        </div>\n");
       out.write("        <div class=\"main-panel\">\n");
+      out.write("           \n");
       out.write("            <div class=\"content\">\n");
       out.write("                <div class=\"container-fluid\">\n");
       out.write("                    <div class=\"row\">\n");
-      out.write("                        <div class=\"col-md-8\">\n");
-      out.write("                            <div class=\"card\">\n");
-      out.write("                                <div class=\"card-header\">\n");
-      out.write("                                    <h4 class=\"card-title\">Edit Profile</h4>\n");
+      out.write("                        <div class=\"col-md-12\">\n");
+      out.write("                            <div class=\"card strpied-tabled-with-hover\">\n");
+      out.write("                                <div class=\"card-header \">\n");
+      out.write("                                    <h4 class=\"card-title\">Order manager</h4>\n");
       out.write("                                </div>\n");
-      out.write("                                <div class=\"card-body\">\n");
-      out.write("                                    <form>\n");
-      out.write("                                        <div class=\"row\">\n");
-      out.write("                                            <div class=\"col-md-6 pr-1\">\n");
-      out.write("                                                <div class=\"form-group\">\n");
-      out.write("                                                    <label>ID (disabled)</label>\n");
-      out.write("                                                    <input type=\"text\" class=\"form-control\" disabled=\"\" placeholder=\"Company\" value=\"1\">\n");
-      out.write("                                                </div>\n");
-      out.write("                                            </div>\n");
-      out.write("                                            <div class=\"col-md-6 px-1\">\n");
-      out.write("                                                <div class=\"form-group\">\n");
-      out.write("                                                    <label>Username</label>\n");
-      out.write("                                                    <input type=\"text\" class=\"form-control\" placeholder=\"Username\" value=\"user1\">\n");
-      out.write("                                                </div>\n");
-      out.write("                                            </div>\n");
-      out.write("                                            <div class=\"col-md-6 pl-1\">\n");
-      out.write("                                                <div class=\"form-group\">\n");
-      out.write("                                                    <label for=\"exampleInputEmail1\">Email address</label>\n");
-      out.write("                                                    <input type=\"email\" class=\"form-control\" placeholder=\"user1@gmail.com\">\n");
-      out.write("                                                </div>\n");
-      out.write("                                            </div>\n");
-      out.write("                                        </div>\n");
-      out.write("                                        <div class=\"row\">\n");
-      out.write("                                            <div class=\"col-md-6 pr-1\">\n");
-      out.write("                                                <div class=\"form-group\">\n");
-      out.write("                                                    <label>Password</label>\n");
-      out.write("                                                    <input type=\"password\" class=\"form-control\" placeholder=\"Company\" value=\"Mike\">\n");
-      out.write("                                                </div>\n");
-      out.write("                                            </div>\n");
-      out.write("                                            <div class=\"col-md-6 pl-1\">\n");
-      out.write("                                                <div class=\"form-group\">\n");
-      out.write("                                                    <label>Note</label>\n");
-      out.write("                                                    <input type=\"text\" class=\"form-control\" placeholder=\"Last Name\" value=\"Note\">\n");
-      out.write("                                                </div>\n");
-      out.write("                                            </div>\n");
-      out.write("                                        </div>\n");
-      out.write("                                        <button type=\"submit\" class=\"btn btn-info btn-fill pull-right\">Update Profile</button>\n");
-      out.write("                                        <div class=\"clearfix\"></div>\n");
-      out.write("                                    </form>\n");
+      out.write("                                <div class=\"card-body table-full-width table-responsive\">\n");
+      out.write("                                    <table class=\"table table-hover table-striped\">\n");
+      out.write("                                        <thead>\n");
+      out.write("                                            <th>Order ID</th>\n");
+      out.write("                                            <th>Full Name</th>\n");
+      out.write("                                            <th>Address</th>\n");
+      out.write("                                            <th>Date Arrival</th>\n");
+      out.write("                                            <th>Date Departure</th>\n");
+      out.write("                                            <th>Room Image</th>\n");
+      out.write("                                            <th>Price</th>\n");
+      out.write("                                            <th>Status</th>\n");
+      out.write("                                        </thead>\n");
+      out.write("                                        <tbody>\n");
+      out.write("                                            ");
+
+                                                for (int i = 0; i < list.size(); i++) {
+                                                    String status = null;
+                                                    if(list.get(i).getStatus() == 2){
+                                                        status =  "Waiting";
+                                                    }else if(list.get(i).getStatus() == 1){
+                                                        status = "Checked In";
+                                                    }else{
+                                                        status = "Checked Out";
+                                                    }
+                                       
+                                                    
+                                            
+      out.write("\n");
+      out.write("                                            <tr>\n");
+      out.write("                                                <td>");
+      out.print(list.get(i).getOerderId());
+      out.write("</td>\n");
+      out.write("                                                <td>");
+      out.print(cus.getName(list.get(i).getCustomerID()));
+      out.write("</td>\n");
+      out.write("                                                <td>");
+      out.print(list.get(i).getAddress());
+      out.write("</td>\n");
+      out.write("                                                <td>");
+      out.print(list.get(i).getDateArrival());
+      out.write("</td>\n");
+      out.write("                                                <td>");
+      out.print(list.get(i).getDateDeparture());
+      out.write("</td>\n");
+      out.write("                                                <td><img src=\"image/");
+      out.print(room.getImage(list.get(i).getRoomID()));
+      out.write(".jpg\" alt=\"\" height=\"100px\" width=\"100px\"></td>\n");
+      out.write("                                                <td>");
+      out.print(list.get(i).getPrice());
+      out.write("</td>\n");
+      out.write("                                                <td>");
+      out.print(status);
+      out.write("</td>\n");
+      out.write("                                                <td>\n");
+      out.write("                                                ");
+
+                                                if(list.get(i).getStatus() == 2){
+                                                    
+                                                    
+      out.write("\n");
+      out.write("                                                    <button type=\"submit\" class=\"btn btn-info btn-fill pull-right\"><a href=\"checkinRoom.jsp?roomID=");
+      out.print(list.get(i).getRoomID());
+      out.write("\" style=\"color: white\">Checked In</a></button></td>\n");
+      out.write("                                                ");
+}else if(list.get(i).getStatus() == 1){
+
+                                                    
+      out.write("\n");
+      out.write("                                                <button type=\"submit\" class=\"btn btn-info btn-fill pull-right\"><a href=\"checkOutRoom.jsp?roomID=");
+      out.print(list.get(i).getRoomID());
+      out.write("\" style=\"color: white\">Checked Out</a></button></td>\n");
+      out.write("    \n");
+      out.write("                                                    ");
+}
+      out.write("\n");
+      out.write("                                            </tr>\n");
+      out.write("                                            ");
+
+                                                }
+                                            
+      out.write("\n");
+      out.write("                                        </tbody>\n");
+      out.write("                                    </table>\n");
       out.write("                                </div>\n");
       out.write("                            </div>\n");
       out.write("                        </div>\n");
+      out.write("                        \n");
       out.write("                    </div>\n");
       out.write("                </div>\n");
       out.write("            </div>\n");
+      out.write("            \n");
       out.write("        </div>\n");
       out.write("    </div>\n");
+      out.write("    \n");
       out.write("</body>\n");
       out.write("<!--   Core JS Files   -->\n");
       out.write("<script src=\"assets/js/core/jquery.3.2.1.min.js\" type=\"text/javascript\"></script>\n");
       out.write("<script src=\"assets/js/core/popper.min.js\" type=\"text/javascript\"></script>\n");
       out.write("<script src=\"assets/js/core/bootstrap.min.js\" type=\"text/javascript\"></script>\n");
       out.write("<!--  Plugin for Switches, full documentation here: http://www.jque.re/plugins/version3/bootstrap.switch/ -->\n");
-      out.write("<script src=\"../assets/js/plugins/bootstrap-switch.js\"></script>\n");
+      out.write("<script src=\"assets/js/plugins/bootstrap-switch.js\"></script>\n");
       out.write("<!--  Google Maps Plugin    -->\n");
       out.write("<script type=\"text/javascript\" src=\"https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE\"></script>\n");
       out.write("<!--  Chartist Plugin  -->\n");
@@ -188,7 +239,6 @@ roomDAO room = new roomDAO();
       out.write("<script src=\"assets/js/light-bootstrap-dashboard.js?v=2.0.0 \" type=\"text/javascript\"></script>\n");
       out.write("<!-- Light Bootstrap Dashboard DEMO methods, don't include it in your project! -->\n");
       out.write("<script src=\"assets/js/demo.js\"></script>\n");
-      out.write("\n");
       out.write("</html>\n");
     } catch (Throwable t) {
       if (!(t instanceof SkipPageException)){

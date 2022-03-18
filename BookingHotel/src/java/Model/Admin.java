@@ -94,6 +94,4 @@ public class Admin {
         this.status = status;
     }
 
-    
 }
-

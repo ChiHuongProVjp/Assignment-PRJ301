@@ -1,14 +1,11 @@
-<%-- 
-    Document   : role
-    Created on : Mar 4, 2022, 11:50:38 PM
-    Author     : Admin
---%>
-
 <%@page import="java.util.ArrayList"%>
 <%@page import="Model.Customer"%>
 <%@page import="Dal.CustomerDBContext"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%
+    if(session.getAttribute("login")==null){
+    response.sendRedirect("loginAdmin.jsp");
+    }
     CustomerDBContext cus = new CustomerDBContext();
     ArrayList<Customer> list = cus.loadProduct();
 %>
@@ -81,7 +78,7 @@
                                     <div class="card-body table-full-width table-responsive">
                                         <table class="table table-hover table-striped">
                                             <thead>
-                                            <th>Customer ID</th>
+                                            <th>No.</th>
                                             <th>Full Name</th>
                                             <th>Address</th>
                                             <th>Email</th>
@@ -98,7 +95,7 @@
                                                                 : "Female";
                                                 %>
                                                 <tr>
-                                                    <td><%=list.get(i).getCustomerId()%></td>
+                                                    <td><%=i+1%></td>
                                                     <td><%=list.get(i).getFullName()%></td>
                                                     <td><%=list.get(i).getAddress()%></td>
                                                     <td><%=list.get(i).getEmail()%></td>

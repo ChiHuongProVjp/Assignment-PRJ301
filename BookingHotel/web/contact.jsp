@@ -1,9 +1,3 @@
-<%-- 
-    Document   : contact
-    Created on : Mar 3, 2022, 11:19:09 AM
-    Author     : Admin
---%>
-
 <%@page import="java.util.ArrayList"%>
 <%@page import="Model.Room"%>
 <%@page import="Dal.roomDBContext"%>
@@ -52,8 +46,19 @@
                             <li class="nav-item "><a class="nav-link" href="aboutUs.jsp">About us</a></li>
                             <li class="nav-item "><a class="nav-link" href="accomodation.jsp">Accomodation</a></li>
                             <li class="nav-item "><a class="nav-link" href="gallery.jsp">Gallery</a></li>
+                            <%
+                                if(session.getAttribute("ID")==null){
+                             %>
                             <li class="nav-item "><a class="nav-link" href="register.jsp">Register</a></li>
                             <li class="nav-item "><a class="nav-link" href="login.jsp">Login</a></li>
+                            <%
+                                }else{
+                             %>
+                            <li class="nav-item "><a class="nav-link" href="historyBooking.jsp">History Booking</a></li>
+                            <li class="nav-item "><a class="nav-link" href="login.jsp">Logout</a></li>
+                            <%
+                                }
+                             %>
                             <li class="nav-item active"><a class="nav-link" href="contact.jsp">Contact</a></li>
 
                         </ul>

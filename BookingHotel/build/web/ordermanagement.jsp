@@ -1,9 +1,3 @@
-<%-- 
-    Document   : ordermanagement
-    Created on : Mar 5, 2022, 12:43:43 AM
-    Author     : Admin
---%>
-
 <%@page import="Dal.CustomerDBContext"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page import="Model.Order"%>
@@ -12,6 +6,9 @@
 <%@page import="Model.Room"%>
 <%@page import="Dal.roomDBContext"%>
 <%
+    if(session.getAttribute("login")==null){
+    response.sendRedirect("loginAdmin.jsp");
+    }
 OrderDBContext order = new OrderDBContext();
 ArrayList<Order> list = order.loadOder();
 roomDBContext room = new roomDBContext();
@@ -85,7 +82,7 @@ CustomerDBContext cus = new CustomerDBContext();
                                 <div class="card-body table-full-width table-responsive">
                                     <table class="table table-hover table-striped">
                                         <thead>
-                                            <th>Order ID</th>
+                                            <th>No.</th>
                                             <th>Full Name</th>
                                             <th>Address</th>
                                             <th>Date Arrival</th>
@@ -109,7 +106,7 @@ CustomerDBContext cus = new CustomerDBContext();
                                                     
                                             %>
                                             <tr>
-                                                <td><%=list.get(i).getOerderId()%></td>
+                                                <td><%=i+1%></td>
                                                 <td><%=cus.getName(list.get(i).getCustomerID())%></td>
                                                 <td><%=list.get(i).getAddress()%></td>
                                                 <td><%=list.get(i).getDateArrival()%></td>

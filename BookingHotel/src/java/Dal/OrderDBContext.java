@@ -72,6 +72,34 @@ public class OrderDBContext {
         }
         return listOder;
     }
+    public ArrayList<Order> loadOderByID(int ID) {
+        listOder = new ArrayList<>();//declare variables
+        query = "SELECT * FROM [BookingHotel].[dbo].[orders] WHERE [orders].[customerId] = "+ID;//query sql select data
+        try {
+            st = this.con.createStatement();
+            rs = st.executeQuery(query);//execute query
+            
+                 while (rs.next()) {
+                    int orderId = rs.getInt("orderId");
+                    int customerId = rs.getInt("customerId");//get id product 
+                    String address = rs.getString("address");
+                    String dateBuy = rs.getString("dateBuy");//get name product 
+                    String dateDone = rs.getString("dateDone");
+                    int roomId = rs.getInt("roomId");
+                    double price = rs.getDouble("price");
+                    int status = rs.getInt("status");//get status
+                    
+                    listOder.add(new Order(orderId, customerId, address, dateBuy, dateDone, roomId, price, status));
+
+                }
+            
+        } catch (SQLException ex) {
+            System.out.println("Can't load data of list room");//display warning message
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+        return listOder;
+    }
     public int insertOrder(Order oder) {
         query = "INSERT [dbo].[orders] ([customerId], [address], [dateBuy], [dateDone], [roomId], [price], [status]) VALUES (?, ?, ?,?,?,?,?)";//query insert
         

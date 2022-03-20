@@ -36,7 +36,7 @@ public class UserLoginServlet extends HttpServlet {
 
         if (login != null) {
             session.setAttribute("ID", login);
-            RequestDispatcher dispatcher = request.getRequestDispatcher("indexLogin.jsp");
+            RequestDispatcher dispatcher = request.getRequestDispatcher("index.jsp");
             dispatcher.forward(request, response);
         } else {
             RequestDispatcher dispatcher = request.getRequestDispatcher("login.jsp");

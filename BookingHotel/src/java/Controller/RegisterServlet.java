@@ -34,15 +34,23 @@ public class RegisterServlet extends HttpServlet {
         String phone = request.getParameter("phone");
 
         LoginDBContext register = new LoginDBContext();
-        boolean check = register.Register(username, password);
-        boolean addInfor = register.InsertInfor(fullName, address, email, 1, phone, 1);
-        if (check && addInfor) {
+        
+        if(register.checkExist(username)){
+            request.setAttribute("checkExist", "Duplicated username");
+            RequestDispatcher dispatcher = request.getRequestDispatcher("register.jsp");
+            dispatcher.forward(request, response);
+        }else{
+            boolean addInfor = register.InsertInfor(fullName, address, email, 1, phone, 1);
+            boolean check = register.Register(username, password,register.getCusID());
+            if (check && addInfor) {
             RequestDispatcher dispatcher = request.getRequestDispatcher("login.jsp");
             dispatcher.forward(request, response);
         } else {
             RequestDispatcher dispatcher = request.getRequestDispatcher("register.jsp");
             dispatcher.forward(request, response);
         }
+        }
+        
 
     }
 }

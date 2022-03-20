@@ -11,7 +11,7 @@ public class Room {
     private double price;
     private int typeId;
     private int status;
-
+    private String decription;
     public Room() {
     }
 
@@ -21,6 +21,23 @@ public class Room {
         this.price = price;
         this.typeId = typeId;
         this.status = status;
+    }
+
+    public Room(int roomId, String roomName, double price, int typeId, int status, String decription) {
+        this.roomId = roomId;
+        this.roomName = roomName;
+        this.price = price;
+        this.typeId = typeId;
+        this.status = status;
+        this.decription = decription;
+    }
+
+    public String getDecription() {
+        return decription;
+    }
+
+    public void setDecription(String decription) {
+        this.decription = decription;
     }
 
     public int getRoomId() {

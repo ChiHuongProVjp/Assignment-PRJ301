@@ -59,7 +59,7 @@ public class OrderServlet extends HttpServlet {
                     if (check <= 0) {
                         response.sendRedirect("login.jsp");
                     } else {
-                        response.sendRedirect("indexLogin.jsp");
+                        response.sendRedirect("index.jsp");
                     }
                 }
 

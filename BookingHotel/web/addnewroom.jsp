@@ -1,9 +1,3 @@
-<%-- 
-    Document   : addnewroom
-    Created on : Mar 5, 2022, 1:02:34 AM
-    Author     : Admin
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
@@ -68,31 +62,31 @@
                                 <div class="card-body">
                                     <form action="addRoomServlet" method="post">
                                         <div class="row">
-                                            <div class="col-md-5 pr-1">
-                                                <div class="form-group">
-                                                    <label>ID (disabled)</label>
-                                                    <input type="text" class="form-control" disabled="" placeholder="Company" value="...">
-                                                </div>
-                                            </div>
-                                            <br>
+                                            
                                             <div class="col-md-5 px-1">
                                                 <div class="form-group">
                                                     <label>Room Name</label>
-                                                    <input type="text" class="form-control" id="roomname" name="roomname" placeholder="Room Name" value="Room 6">
+                                                    <input type="text" class="form-control" required="" id="roomname" name="roomname" placeholder="Room Name" value="">
+                                                </div>
+                                            </div>
+                                            <br><div class="col-md-5 pr-1">
+                                                <div class="form-group">
+                                                    <label>Description</label>
+                                                    <input type="text" name="decription" required="" class="form-control"  placeholder="Description" value="">
                                                 </div>
                                             </div>
                                             <br>
                                             <div class="col-md-5 pr-1">
                                                 <div class="form-group">
                                                     <label>Price</label>
-                                                    <input type="number" class="form-control" id="price" name="price" placeholder="" value="1">
+                                                    <input type="number" class="form-control" required="" id="image" name="price" placeholder="" value="1000000">
                                                 </div>
                                             </div>
                                             <br>
                                             <div class="col-md-5 px-1">
                                                 <div class="form-group">
-                                                    <label>Type ID</label>
-                                                    <input type="number" id="typeid" name="typeid" class="form-control" placeholder="" value="">
+                                                    <label>Image</label>
+                                                    <input type="text" id="Image" name="Image" required="" class="form-control" placeholder="" value="">
                                                 </div>
                                             </div>
                                             <br>

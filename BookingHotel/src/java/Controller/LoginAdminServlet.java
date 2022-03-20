@@ -49,7 +49,7 @@ public class LoginAdminServlet extends HttpServlet {
                 response.sendRedirect("roommanage.jsp");
             } else {
                 session.setAttribute("login", null);
-                response.sendRedirect("loginAdmin.jsp");
+                response.sendRedirect("login.jsp");
             }
         } catch (SQLException ex) {
             Logger.getLogger(LoginAdminServlet.class.getName()).log(Level.SEVERE, null, ex);

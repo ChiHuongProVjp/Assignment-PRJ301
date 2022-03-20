@@ -1,16 +1,13 @@
-<%-- 
-    Document   : useraccount
-    Created on : Mar 4, 2022, 11:31:15 PM
-    Author     : Admin
---%>
-
 <%@page import="java.util.ArrayList"%>
 <%@page import="Model.Room"%>
 <%@page import="Dal.roomDBContext"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%
+    if(session.getAttribute("login")==null){
+    response.sendRedirect("loginAdmin.jsp");
+    }
     roomDBContext room = new roomDBContext();
-    ArrayList<Room> list = room.loadProduct();
+    ArrayList<Room> list = room.loadAllProduct();
 %>
 <!DOCTYPE html>
 <html>
@@ -76,7 +73,7 @@
                                     <div class="card-body table-full-width table-responsive">
                                         <table class="table table-hover table-striped">
                                             <thead>
-                                            <th>Room ID</th>
+                                            <th>No.</th>
                                             <th>Room Name</th>
                                             <th>Image</th>
                                             <th>Price</th>
@@ -89,21 +86,22 @@
                                                                 : "Unactive";
                                                 %>
                                                 <tr>
-                                                    <td><%=list.get(i).getRoomId()%></td>
+                                                    <td><%=i+1%></td>
                                                     <td><%=list.get(i).getRoomName()%></td>
                                                     <td><img src="image/<%=room.getImage(list.get(i).getRoomId())%>.jpg" alt="" height="100px" width="100px"></td>
                                                     <td><%=list.get(i).getPrice()%></td>
                                                     <td><%=status%></td>
                                                     <%
-                                                        if (list.get(i).getStatus() == 2) {
+                                                        if (list.get(i).getStatus() == 0) {
 
                                                     %>
-                                                    <td><button type="submit" class="btn btn-info btn-fill pull-right"><a href="activeRoom.jsp?roomID=<%=list.get(i).getRoomId()%>" style="color: white">Block room</a></button></td>
+                                                    <td><button type="submit" class="btn btn-info btn-fill pull-right"><a href="activeRoom.jsp?roomID=<%=list.get(i).getRoomId()%>" style="color: white">Active room</a></button></td>
                                                     <%} else if (list.get(i).getStatus() == 1) {
 
                                                     %>
                                                     <td><button type="submit" class="btn btn-info btn-fill pull-right"><a href="unActiveRoom.jsp?roomID=<%=list.get(i).getRoomId()%>" style="color: white">Block room</a></button></td>
                                                     <%}%>
+                                                    <td><button type="submit" class="btn btn-info btn-fill pull-right"><a href="updateRoom.jsp?roomID=<%=list.get(i).getRoomId()%>" style="color: white">Update Room</a></button></td>
                                                 </tr>
                                                 <%
                                                     }

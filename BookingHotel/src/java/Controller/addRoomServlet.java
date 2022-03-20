@@ -31,14 +31,16 @@ public class addRoomServlet extends HttpServlet {
         HttpServletRequest reg = (HttpServletRequest) request;
         String roomname = request.getParameter("roomname");
         double price = Double.parseDouble(request.getParameter("price"));
-        int typeid = Integer.valueOf(request.getParameter("typeid"));
-        Room room = new Room(1, roomname, price, typeid, 1);
+        String decription = request.getParameter("decription");
+        String Image = request.getParameter("Image");
+        Room room = new Room(1, roomname, price, 1, 1,decription);
         roomDBContext roomD = null;
         try {
             roomD = new roomDBContext();
 
             int check = roomD.insertRoom(room);
             if (check > 0) {
+                roomD.insertImage(Image, roomD.getRoomID());
                 response.sendRedirect("roommanage.jsp");
             } else {
                 response.sendRedirect("addnewroom.jsp");

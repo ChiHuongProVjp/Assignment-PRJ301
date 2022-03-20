@@ -1,10 +1,7 @@
-<%-- 
-    Document   : login
-    Created on : Mar 3, 2022, 10:24:54 AM
-    Author     : Admin
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%
+session.invalidate();
+%>
 <!DOCTYPE html>
 <html>
     <head>

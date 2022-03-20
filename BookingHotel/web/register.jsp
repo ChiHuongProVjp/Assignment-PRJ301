@@ -1,9 +1,3 @@
-<%-- 
-    Document   : register.jsp
-    Created on : Mar 10, 2022, 11:42:56 PM
-    Author     : Admin
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -74,26 +68,33 @@
                     <div class="col-md-9">
                         <form class="row contact_form" action="RegisterServlet" method="post" id="contactForm">
                             <div class="col-md-6">
+                                <%
+                                    if(request.getAttribute("checkExist")!=null){
+                                %>
+                                <a style="color: red"><%=request.getAttribute("checkExist")%></a>
+                                <%
+                                    }
+                                %>
                                 <div class="form-group">
-                                    <input type="text" class="form-control" id="name" name="username" placeholder="Enter your user name">
+                                    <input type="text" class="form-control" required="" id="name" name="username" placeholder="Enter your user name">
                                 </div>
                                 <div class="form-group">
-                                    <input type="password" class="form-control" id="email" name="password" placeholder="Enter password">
+                                    <input type="password" class="form-control" required="" id="email" name="password" placeholder="Enter password">
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" class="form-control" id="name" name="fullName" placeholder="Enter your full name">
+                                    <input type="text" class="form-control" required="" id="name" name="fullName" placeholder="Enter your full name">
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" class="form-control" id="name" name="address" placeholder="Enter your address">
+                                    <input type="text" class="form-control" required="" id="name" name="address" placeholder="Enter your address">
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" class="form-control" id="name" name="email" placeholder="Enter your email">
+                                    <input type="text" class="form-control" required="" id="name" name="email" placeholder="Enter your email">
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" class="form-control" id="name" name="phone" placeholder="Enter your phone">
+                                    <input type="text" class="form-control" required="" id="name" name="phone" placeholder="Enter your phone">
                                 </div>
                                 <div class="col-md-12 text-right">
-                                    <button type="submit" value="submit" class="btn theme_btn button_hover">Register</button>
+                                    <button type="submit" value="submit" required="" class="btn theme_btn button_hover">Register</button>
                                 </div>
                             </div>
                         </form>

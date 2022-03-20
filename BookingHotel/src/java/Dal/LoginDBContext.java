@@ -40,13 +40,52 @@ public class LoginDBContext {
         }
         return status;
     }
+    public int getCusID() {
+        int status = 0;
 
-    public boolean Register(String name, String pass) {
+        try {
+            con = cn.getConnectDB();
+            PreparedStatement ps = con.prepareStatement(
+                    "SELECT MAX(customerId) as id\n" +
+                    "  FROM [BookingHotel].[dbo].[customer]");
+
+            ResultSet rs = ps.executeQuery();
+            while (rs.next()) {
+                status = rs.getInt("id");
+            }
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+        return status;
+    }
+    public boolean checkExist(String name) {
+        boolean status = false;
+
+        try {
+            con = cn.getConnectDB();
+            PreparedStatement ps = con.prepareStatement(
+                    "SELECT   [username]\n"
+                    + "      ,[password]\n"
+                    + "      ,[customerID]\n"
+                    + "  FROM [BookingHotel].[dbo].[customeraccount]\n"
+                    + "  Where [username] = '"+name+"'");
+
+            ResultSet rs = ps.executeQuery();
+            while (rs.next()) {
+                status = true;
+            }
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+        return status;
+    }
+
+    public boolean Register(String name, String pass, int id) {
         boolean status = false;
         try {
             con = cn.getConnectDB();
             PreparedStatement ps = con.prepareStatement(
-                    "INSERT [dbo].[customeraccount] ([username], [password]) VALUES ('"+name+"', '"+pass+"')");
+                    "INSERT [dbo].[customeraccount] ([username], [password], [customerID]) VALUES ('"+name+"', '"+pass+"', "+id+")");
             ps.executeUpdate();
             status = true;
 

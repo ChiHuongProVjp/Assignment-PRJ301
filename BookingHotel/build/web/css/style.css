@@ -766,12 +766,16 @@ button:focus {
   margin-bottom: 10px;
   overflow: hidden;
   border-radius: 10px;
+  height: 262px;
+  width: 262px;
 }
 
 .accomodation_item .hotel_img img {
   -webkit-transition: all 0.4s linear;
   -o-transition: all 0.4s linear;
   transition: all 0.4s linear;
+    height: 262px;
+    width: 262px;
 }
 
 .accomodation_item .hotel_img .theme_btn {
@@ -2647,7 +2651,10 @@ h1, h2, h3, h4, h5, h6 {
 .progress-table .country {
   width: 28.07%;
 }
-
+.progress-table .country img{
+  width: 262px;
+  height: 262px;
+}
 .progress-table .visit {
   width: 19.74%;
 }

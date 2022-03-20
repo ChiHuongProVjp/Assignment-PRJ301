@@ -1,9 +1,3 @@
-<%-- 
-    Document   : login
-    Created on : Mar 3, 2022, 10:24:54 AM
-    Author     : Admin
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -56,6 +50,7 @@
             </div>
         </section>
         <!--================Breadcrumb Area =================-->
+
 
         <!--================Contact Area =================-->
         <section class="contact_area section_gap">

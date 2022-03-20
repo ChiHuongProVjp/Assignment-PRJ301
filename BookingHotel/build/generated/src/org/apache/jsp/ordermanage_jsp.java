@@ -4,10 +4,10 @@ import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.jsp.*;
 import Model.Order;
-import DAO.OrderDAO;
+import Dal.OrderDBContext;
 import java.util.ArrayList;
 import Model.Room;
-import DAO.roomDAO;
+import Dal.roomDBContext;
 
 public final class ordermanage_jsp extends org.apache.jasper.runtime.HttpJspBase
     implements org.apache.jasper.runtime.JspSourceDependent {

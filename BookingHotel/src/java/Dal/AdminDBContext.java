@@ -15,7 +15,6 @@ import java.util.ArrayList;
  */
 public class AdminDBContext {
     //declare variables
-    public static int numberPage = 10;
     private Connection con;
     DBContext cn = new DBContext();
     private PreparedStatement pst;

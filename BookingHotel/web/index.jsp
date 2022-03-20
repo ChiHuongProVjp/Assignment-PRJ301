@@ -3,7 +3,6 @@
     Created on : Mar 3, 2022, 11:19:09 AM
     Author     : Admin
 --%>
-
 <%@page import="java.util.ArrayList"%>
 <%@page import="Model.Room"%>
 <%@page import="Dal.roomDBContext"%>
@@ -19,7 +18,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="icon" href="image/favicon.png" type="image/png">
-        <title>King Hotel</title>
+        <title>Ninh Binh Hotel</title>
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="css/bootstrap.css">
         <link rel="stylesheet" href="vendors/linericon/style.css">
@@ -38,17 +37,24 @@
             <div class="container">
                 <nav class="navbar navbar-expand-lg navbar-light">
                     <!-- Brand and toggle get grouped for better mobile display -->
+                    <a class="navbar-brand logo_h" href="index.html"><img src="image/Logo.png" alt=""></a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
-                        < span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+
                     </button>
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
                         <ul class="nav navbar-nav menu_nav ml-auto">
                             <li class="nav-item active"><a class="nav-link" href="index.jsp">Home</a></li>
-                            <li class="nav-item"><a class="nav-link" href="register.jsp">Register</a></li>
-                            <li class="nav-item active"><a class="nav-link" href="login.jsp">Login</a></li>
+                            <li class="nav-item "><a class="nav-link" href="aboutUs.jsp">About us</a></li>
+                            <li class="nav-item "><a class="nav-link" href="accomodation.jsp">Accomodation</a></li>
+                            <li class="nav-item "><a class="nav-link" href="gallery.jsp">Gallery</a></li>
+                            <li class="nav-item "><a class="nav-link" href="register.jsp">Register</a></li>
+                            <li class="nav-item "><a class="nav-link" href="login.jsp">Login</a></li>
+                            <li class="nav-item "><a class="nav-link" href="contact.jsp">Contact</a></li>
+
                         </ul>
                     </div> 
                 </nav>
@@ -62,9 +68,11 @@
                 <div class="overlay bg-parallax" data-stellar-ratio="0.9" data-stellar-vertical-offset="0" data-background=""></div>
                 <div class="container">
                     <div class="banner_content text-center">
-                        
+
+                        <h2>Welcome to our hotel</h2>
                         <h2>Ninh Binh Legend</h2>
-                        <h2>Your journey begins here!</h2>
+                        <h3>Your journey begins here!</h3>
+
 
                         <a href="#" class="btn theme_btn button_hover">Get Started</a>
                     </div>
@@ -125,6 +133,7 @@
                 </div>
             </div>
         </section>
+        <!--================Banner Area =================-->
 
         <!--================ Accomodation Area  =================-->
         <section class="accomodation_area section_gap">
@@ -150,6 +159,198 @@
                     <%}%>
                 </div>
             </div>
+            <!--================ Accomodation Area  =================-->
+
+
+            <!--================ Facilities Area  =================-->
+            <section class="facilities_area section_gap">
+                <div class="overlay bg-parallax" data-stellar-ratio="0.8" data-stellar-vertical-offset="0" data-background="">  
+                </div>
+                <div class="container">
+                    <div class="section_title text-center">
+                        <h2 class="title_w">Royal Facilities</h2>
+                        <p>Who are in extremely love with eco friendly system.</p>
+                    </div>
+                    <div class="row mb_30">
+                        <div class="col-lg-4 col-md-6">
+                            <div class="facilities_item">
+                                <h4 class="sec_h4"><i class="lnr lnr-dinner"></i>Restaurant</h4>
+                                <p>Usage of the Internet is becoming more common due to rapid advancement of technology and power.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="facilities_item">
+                                <h4 class="sec_h4"><i class="lnr lnr-bicycle"></i>Sports CLub</h4>
+                                <p>Usage of the Internet is becoming more common due to rapid advancement of technology and power.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="facilities_item">
+                                <h4 class="sec_h4"><i class="lnr lnr-shirt"></i>Swimming Pool</h4>
+                                <p>Usage of the Internet is becoming more common due to rapid advancement of technology and power.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="facilities_item">
+                                <h4 class="sec_h4"><i class="lnr lnr-car"></i>Rent a Car</h4>
+                                <p>Usage of the Internet is becoming more common due to rapid advancement of technology and power.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="facilities_item">
+                                <h4 class="sec_h4"><i class="lnr lnr-construction"></i>Gymnesium</h4>
+                                <p>Usage of the Internet is becoming more common due to rapid advancement of technology and power.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="facilities_item">
+                                <h4 class="sec_h4"><i class="lnr lnr-coffee-cup"></i>Bar</h4>
+                                <p>Usage of the Internet is becoming more common due to rapid advancement of technology and power.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--================ Facilities Area  =================-->
+
+            
+            
+            <!--================ Testimonial Area  =================-->
+            <section class="testimonial_area section_gap">
+                <div class="container">
+                    <div class="section_title text-center">
+                        <h2 class="title_color">Testimonial from our Clients</h2>
+                        <p>The French Revolution constituted for the conscience of the dominant aristocratic class a fall from </p>
+                    </div>
+                    <div class="testimonial_slider owl-carousel">
+                        <div class="media testimonial_item">
+                            <img class="rounded-circle" src="image/instagram/Image-01.jpg" alt="">
+                            <div class="media-body">
+                                <p>Anh Chị chủ rất dễ thương & nhiệt tình. Mình định đi xe ôm đến chỗ kia nhưng không thấy xe, chị liền đưa chiếc Vespa của nhà chị cho mình đi, 
+                                    còn lật đật đi đổ xăng rồi mới đưa mình. Lần sau có đến Ninh Bình nhất định sẽ quay lại và giới thiệu bạn bè đến đây.  </p>
+                                <a href="#"><h4 class="sec_h4">Fanny Spencer</h4></a>
+                                <div class="star">
+                                    <a href="#"><i class="fa fa-star"></i></a>
+                                    <a href="#"><i class="fa fa-star"></i></a>
+                                    <a href="#"><i class="fa fa-star"></i></a>
+                                    <a href="#"><i class="fa fa-star"></i></a>
+                                    <a href="#"><i class="fa fa-star-half-o"></i></a>
+                                </div>
+                            </div>
+                        </div>    
+                        <div class="media testimonial_item">
+                            <img class="rounded-circle" src="image/instagram/Image-02.jpg" alt="">
+                            <div class="media-body">
+                                <p>Phòng rất mới, sạch sẽ, tiện nghi đầy đủ Chỗ nghỉ có luôn dịch vụ cho thuê xe máy (tất cả xe đều còn rất mới). 
+                                Tôi không ăn sáng, nhưng sự nhiệt tình, tận tâm của khách sạn đã làm tôi rất ấn tượng.</p>
+                                <a href="#"><h4 class="sec_h4">Fanny Spencer</h4></a>
+                                <div class="star">
+                                    <a href="#"><i class="fa fa-star"></i></a>
+                                    <a href="#"><i class="fa fa-star"></i></a>
+                                    <a href="#"><i class="fa fa-star"></i></a>
+                                    <a href="#"><i class="fa fa-star"></i></a>
+                                    <a href="#"><i class="fa fa-star-half-o"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="media testimonial_item">
+                            <img class="rounded-circle" src="image/instagram/Image-03.jpg" alt="">
+                            <div class="media-body">
+                                <p>Tôi không ăn sáng, nhưng sự nhiệt tình, tận tâm của khách sạn đã làm tôi rất ấn tượng.
+                                Khách sạn sạch sẽ, thích nhất là gần trung tâm và có chỗ đậu ô tô rộng rãi.</p>
+                                <a href="#"><h4 class="sec_h4">Fanny Spencer</h4></a>
+                                <div class="star">
+                                    <a href="#"><i class="fa fa-star"></i></a>
+                                    <a href="#"><i class="fa fa-star"></i></a>
+                                    <a href="#"><i class="fa fa-star"></i></a>
+                                    <a href="#"><i class="fa fa-star"></i></a>
+                                    <a href="#"><i class="fa fa-star-half-o"></i></a>
+                                </div>
+                            </div>
+                        </div>    
+                        <div class="media testimonial_item">
+                            <img class="rounded-circle" src="image/instagram/Image-04.jpg" alt="">
+                            <div class="media-body">
+                                <p>Quản lý rất nhiệt tình và linh động trong xử lý tình huống. Cô chủ thân thiện, nhiệt tình, có bạn cún mặt xệ dễ thương. 
+                                rất tuyệt, anh chủ nhiệt tình, phòng sạch sẽ tiện nghi</p>
+                                <a href="#"><h4 class="sec_h4">Fanny Spencer</h4></a>
+                                <div class="star">
+                                    <a href="#"><i class="fa fa-star"></i></a>
+                                    <a href="#"><i class="fa fa-star"></i></a>
+                                    <a href="#"><i class="fa fa-star"></i></a>
+                                    <a href="#"><i class="fa fa-star"></i></a>
+                                    <a href="#"><i class="fa fa-star-half-o"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--================ Testimonial Area  =================-->
+            
+            
+            
+            
+            <!--================ Latest Blog Area  =================-->
+            <section class="latest_blog_area section_gap">
+                <div class="container">
+                    <div class="section_title text-center">
+                        <h2 class="title_color">latest posts from blog</h2>
+                        <p>The French Revolution constituted for the conscience of the dominant aristocratic class a fall from </p>
+                    </div>
+                    <div class="row mb_30">
+                        <div class="col-lg-4 col-md-6">
+                            <div class="single-recent-blog-post">
+                                <div class="thumb">
+                                    <img class="img-fluid" src="image/blog/blog-1.jpg" alt="post">
+                                </div>
+                                <div class="details">
+                                    <div class="tags">
+                                        <a href="#" class="button_hover tag_btn">Travel</a>
+                                        <a href="#" class="button_hover tag_btn">Life Style</a>
+                                    </div>
+                                    <a href="#"><h4 class="sec_h4">Low Cost Advertising</h4></a>
+                                    <p>Acres of Diamonds… you’ve read the famous story, or at least had it related to you. A farmer.</p>
+                                    <h6 class="date title_color">31st January,2022</h6>
+                                </div>	
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="single-recent-blog-post">
+                                <div class="thumb">
+                                    <img class="img-fluid" src="image/blog/blog-2.jpg" alt="post">
+                                </div>
+                                <div class="details">
+                                    <div class="tags">
+                                        <a href="#" class="button_hover tag_btn">Travel</a>
+                                        <a href="#" class="button_hover tag_btn">Life Style</a>
+                                    </div>
+                                    <a href="#"><h4 class="sec_h4">Creative Outdoor Ads</h4></a>
+                                    <p>Self-doubt and fear interfere with our ability to achieve or set goals. Self-doubt and fear are</p>
+                                    <h6 class="date title_color">31st January,2022</h6>
+                                </div>	
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="single-recent-blog-post">
+                                <div class="thumb">
+                                    <img class="img-fluid" src="image/blog/blog-3.jpg" alt="post">
+                                </div>
+                                <div class="details">
+                                    <div class="tags">
+                                        <a href="#" class="button_hover tag_btn">Travel</a>
+                                        <a href="#" class="button_hover tag_btn">Life Style</a>
+                                    </div>
+                                    <a href="#"><h4 class="sec_h4">It S Classified How To Utilize Free</h4></a>
+                                    <p>Why do you want to motivate yourself? Actually, just answering that question fully can </p>
+                                    <h6 class="date title_color">31st January,2022</h6>
+                                </div>	
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--================ Recent Area  =================-->
 
             <!--================ start footer Area  =================-->	
             <footer class="footer-area section_gap">
@@ -157,31 +358,76 @@
                     <div class="row">
                         <div class="col-lg-3  col-md-6 col-sm-6">
                             <div class="single-footer-widget">
-                                <h6 class="footer_title">Ninh Bình Legend</h6>
-                                <p>Ninh Binh Legend is a lovely hotel, in the heart of Ninh Bình. In addition to excellent transport 
-                                    links at the meeting point of the main metro line and tram line, our hotel is surrounded by the city centre’s elegant shops, cafés, 
-                                    restaurants, bars, Ninh Binh is the focus of many tourist attractions. Recently, our whole hotel has undergone a complete renovatio</p>
+                                <h6 class="footer_title">About Agency</h6>
+                                <p>Ninh Binh is a province in the southernmost province of the Red River Delta, more than 90km south of Hanoi capital, 
+                                    with an area of ​​nearly 1,391 square kilometers, on the North-South arterial traffic route. With the advantage of being close to the capital and the northern economic center, 
+                                    Ninh Binh has a geographical position and corresponding traffic for socio-economic development. </p>
                             </div>
                         </div>
-
                         <div class="col-lg-3 col-md-6 col-sm-6">
                             <div class="single-footer-widget">
-                                <h6 class="footer_title">Address</h6>
-                                <p>Xuân Thành, Khu biệt thự, Ninh Bình, Việt Nam </p>
-                                <p>(+84) 09 87654321 | ninhbinhlegend@gmail.com </p>
+                                <h6 class="footer_title">Navigation Links</h6>
+                                <div class="row">
+                                    <div class="col-4">
+                                        <ul class="list_style">
+                                            <li><a href="#">Home</a></li>
+                                            <li><a href="#">Feature</a></li>
+                                            <li><a href="#">Services</a></li>
+                                            <li><a href="#">Portfolio</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-4">
+                                        <ul class="list_style">
+                                            <li><a href="#">Team</a></li>
+                                            <li><a href="#">Pricing</a></li>
+                                            <li><a href="#">Blog</a></li>
+                                            <li><a href="#">Contact</a></li>
+                                        </ul>
+                                    </div>										
+                                </div>							
+                            </div>
+                        </div>							
+                        <div class="col-lg-3 col-md-6 col-sm-6">
+                            <div class="single-footer-widget">
+                                <h6 class="footer_title">Newsletter</h6>
+                                <p>For business professionals caught between high OEM price and mediocre print and graphic output, </p>		
+                                <div id="mc_embed_signup">
+                                    <form target="_blank" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01" method="get" class="subscribe_form relative">
+                                        <div class="input-group d-flex flex-row">
+                                            <input name="EMAIL" placeholder="Email Address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email Address '" required="" type="email">
+                                            <button class="btn sub-btn"><span class="lnr lnr-location"></span></button>		
+                                        </div>									
+                                        <div class="mt-10 info"></div>
+                                    </form>
+                                </div>
                             </div>
                         </div>
-
+                        <div class="col-lg-3 col-md-6 col-sm-6">
+                            <div class="single-footer-widget instafeed">
+                                <h6 class="footer_title">InstaFeed</h6>
+                                <ul class="list_style instafeed d-flex flex-wrap">
+                                    <li><img src="image/instagram/Image-01.jpg" alt=""></li>
+                                    <li><img src="image/instagram/Image-02.jpg" alt=""></li>
+                                    <li><img src="image/instagram/Image-03.jpg" alt=""></li>
+                                    <li><img src="image/instagram/Image-04.jpg" alt=""></li>
+                                    <li><img src="image/instagram/Image-05.jpg" alt=""></li>
+                                    <li><img src="image/instagram/Image-06.jpg" alt=""></li>
+                                    <li><img src="image/instagram/Image-07.jpg" alt=""></li>
+                                    <li><img src="image/instagram/Image-08.jpg" alt=""></li>
+                                </ul>
+                            </div>
+                        </div>						
                     </div>
                     <div class="border_line"></div>
                     <div class="row footer-bottom d-flex justify-content-between align-items-center">
                         <p class="col-lg-8 col-sm-12 footer-text m-0"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved></i>
+                            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
                             <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
                         <div class="col-lg-4 col-sm-12 footer-social">
                             <a href="#"><i class="fa fa-facebook"></i></a>
                             <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-youtube"></i></a>
+                            <a href="#"><i class="fa fa-dribbble"></i></a>
+                            <a href="#"><i class="fa fa-behance"></i></a>
                         </div>
                     </div>
                 </div>
@@ -196,7 +442,6 @@
             <script src="js/bootstrap.min.js"></script>
             <script src="vendors/owl-carousel/owl.carousel.min.js"></script>
             <script src="js/jquery.ajaxchimp.min.js"></script>
-            <script src="js/mail-script.js"></script>
             <script src="vendors/bootstrap-datepicker/bootstrap-datetimepicker.min.js"></script>
             <script src="vendors/nice-select/js/jquery.nice-select.js"></script>
             <script src="js/mail-script.js"></script>

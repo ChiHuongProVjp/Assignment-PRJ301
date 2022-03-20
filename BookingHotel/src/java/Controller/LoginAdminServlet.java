@@ -26,11 +26,11 @@ import javax.servlet.http.HttpSession;
 @WebServlet(name = "LoginAdminServlet", urlPatterns = {"/LoginAdminServlet"})
 public class LoginAdminServlet extends HttpServlet {
 
-    @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        request.getRequestDispatcher("loginAdmin.jsp").forward(request, response);
-    }
+//    @Override
+//    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+//            throws ServletException, IOException {
+//        request.getRequestDispatcher("loginAdmin.jsp").forward(request, response);
+//    }
 
     @Override
     public void doPost(HttpServletRequest request, HttpServletResponse response)

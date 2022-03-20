@@ -182,8 +182,9 @@ CustomerDBContext cus = new CustomerDBContext();
       out.print(status);
       out.write("</td>\n");
       out.write("                                                <td>\n");
+      out.write("                                                    \n");
       out.write("                                                ");
-
+// admin xac nhan check in
                                                 if(list.get(i).getStatus() == 2){
                                                     
                                                     
@@ -192,21 +193,21 @@ CustomerDBContext cus = new CustomerDBContext();
       out.print(list.get(i).getRoomID());
       out.write("\" style=\"color: white\">Checked In</a></button></td>\n");
       out.write("                                                ");
-}else if(list.get(i).getStatus() == 1){
+}else if(list.get(i).getStatus() == 1){// da check doi check out
 
                                                     
       out.write("\n");
       out.write("                                                <button type=\"submit\" class=\"btn btn-info btn-fill pull-right\"><a href=\"checkOutRoom.jsp?roomID=");
       out.print(list.get(i).getRoomID());
       out.write("\" style=\"color: white\">Checked Out</a></button></td>\n");
-      out.write("    \n");
-      out.write("                                                    ");
+      out.write("\n");
+      out.write("                                                   ");
 }
       out.write("\n");
       out.write("                                            </tr>\n");
       out.write("                                            ");
 
-                                                }
+                                                } // da check out
                                             
       out.write("\n");
       out.write("                                        </tbody>\n");

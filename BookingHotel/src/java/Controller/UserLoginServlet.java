@@ -16,12 +16,12 @@ import Dal.LoginDBContext;
  */
 @WebServlet("/UserLoginServlet")
 public class UserLoginServlet extends HttpServlet {
-    
-    @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        request.getRequestDispatcher("login.jsp").forward(request, response);
-    }
+
+//    @Override
+//    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+//            throws ServletException, IOException {
+//        request.getRequestDispatcher("indexLogin.jsp").forward(request, response);
+//    }
 
     @Override
     public void doPost(HttpServletRequest request, HttpServletResponse response)

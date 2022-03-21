@@ -1,9 +1,3 @@
-<%-- 
-    Document   : unActiveRoom
-    Created on : Mar 8, 2022, 12:55:39 AM
-    Author     : Admin
---%>
-
 <%@page import="Dal.roomDBContext"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%

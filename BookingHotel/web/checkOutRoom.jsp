@@ -1,9 +1,3 @@
-<%-- 
-    Document   : checkOutRoom
-    Created on : Mar 5, 2022, 1:53:30 AM
-    Author     : Admin
---%>
-
 <%@page import="Dal.roomDBContext"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%

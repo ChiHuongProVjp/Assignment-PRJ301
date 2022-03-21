@@ -1,9 +1,3 @@
-<%-- 
-    Document   : login
-    Created on : Mar 3, 2022, 10:24:54 AM
-    Author     : Admin
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -30,6 +24,7 @@
             <div class="container">
                 <nav class="navbar navbar-expand-lg navbar-light">
                     <!-- Brand and toggle get grouped for better mobile display -->
+                    <a class="navbar-brand logo_h" href="index.html"><img src="image/Logo.png" alt=""></a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
@@ -37,23 +32,20 @@
                     </button>
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
-
                     </div> 
                 </nav>
             </div>
         </header>
         <!--================Header Area =================-->
-        
-        
-        
+
         <!--================Breadcrumb Area =================-->
-        <section class="breadcrumb_area">
+        <section class="breadcrumb_area blog_banner_two">
             <div class="overlay bg-parallax" data-stellar-ratio="0.8" data-stellar-vertical-offset="0" data-background=""></div>
             <div class="container">
                 <div class="page-cover text-center">
                     <h1 class="page-cover-tittle">Welcome Admin</h1>
                     <h2 class="page-cover-tittle">---Login Admin---</h2>
-
+                    </ol>
                 </div>
             </div>
         </section>

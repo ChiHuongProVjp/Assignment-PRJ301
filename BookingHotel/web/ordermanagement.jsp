@@ -1,9 +1,3 @@
-<%-- 
-    Document   : ordermanagement
-    Created on : Mar 5, 2022, 12:43:43 AM
-    Author     : Admin
---%>
-
 <%@page import="Dal.CustomerDBContext"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page import="Model.Order"%>

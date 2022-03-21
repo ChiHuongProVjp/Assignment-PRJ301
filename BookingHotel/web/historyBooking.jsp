@@ -1,8 +1,3 @@
-<%-- 
-    Document   : informationHotel
-    Created on : Mar 20, 2022, 1:09:55 PM
-    Author     : Admin
---%>
 <%@page import="Dal.OrderDBContext"%>
 <%@page import="Model.Order"%>
 <%@page import="java.lang.Integer"%>

@@ -1,9 +1,3 @@
-<%-- 
-    Document   : register.jsp
-    Created on : Mar 10, 2022, 11:42:56 PM
-    Author     : Admin
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>

@@ -1,10 +1,3 @@
-<%-- 
-    Document   : activeRoom
-    Created on : Mar 7, 2022, 10:08:28 PM
-    Author     : Admin
---%>
-
-
 <%@page import="Dal.roomDBContext"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%

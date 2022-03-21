@@ -1,9 +1,3 @@
-<%-- 
-    Document   : gallery
-    Created on : Mar 4, 2022, 4:28:00 PM
-    Author     : Admin
---%>
-
 <%@page import="java.util.ArrayList"%>
 <%@page import="Model.Room"%>
 <%@page import="Dal.roomDBContext"%>

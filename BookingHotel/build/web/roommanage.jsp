@@ -2,7 +2,7 @@
 <%@page import="Model.Room"%>
 <%@page import="Dal.roomDBContext"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%
+<%  //check dang nhap admin
     if(session.getAttribute("login")==null){
     response.sendRedirect("loginAdmin.jsp");
     }

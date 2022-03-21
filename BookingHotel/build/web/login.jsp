@@ -1,3 +1,9 @@
+<%-- 
+    Document   : login
+    Created on : Mar 3, 2022, 10:24:54 AM
+    Author     : Admin
+--%>
+
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%
 session.invalidate();
@@ -73,10 +79,10 @@ session.invalidate();
                         <form class="row contact_form" action="UserLoginServlet" method="post" id="contactForm">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" id="name" name="username" placeholder="Enter your user name">
+                                    <input type="text" class="form-control" id="name" required="" name="username" placeholder="Enter your user name">
                                 </div>
                                 <div class="form-group">
-                                    <input type="password" class="form-control" id="email" name="password" placeholder="Enter password">
+                                    <input type="password" class="form-control" required="" id="email" name="password" placeholder="Enter password">
                                 </div>
                                 <div class="col-md-12 text-right">
                                 <button type="submit" value="submit" class="btn theme_btn button_hover">Login</button>

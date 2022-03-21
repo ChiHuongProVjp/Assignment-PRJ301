@@ -37,19 +37,17 @@ public class LoginAdminServlet extends HttpServlet {
             throws ServletException, IOException {
         try {
             AdminDBContext admin = new AdminDBContext();
-            HttpServletRequest reg = (HttpServletRequest) request;
             String username = request.getParameter("username");
             String password = request.getParameter("password");
             HttpSession session = request.getSession();
             session.setAttribute("username", username);
-            admin.Login(username, (password));
-            String url = reg.getRequestURI();
-            if (admin != null) {
+            boolean check = admin.Login(username, (password));
+            if (check) {
                 session.setAttribute("login", username);
                 response.sendRedirect("roommanage.jsp");
             } else {
                 session.setAttribute("login", null);
-                response.sendRedirect("login.jsp");
+                response.sendRedirect("loginAdmin.jsp");
             }
         } catch (SQLException ex) {
             Logger.getLogger(LoginAdminServlet.class.getName()).log(Level.SEVERE, null, ex);

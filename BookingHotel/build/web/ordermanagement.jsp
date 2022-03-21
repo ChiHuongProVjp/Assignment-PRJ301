@@ -1,3 +1,9 @@
+<%-- 
+    Document   : ordermanagement
+    Created on : Mar 5, 2022, 12:43:43 AM
+    Author     : Admin
+--%>
+
 <%@page import="Dal.CustomerDBContext"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page import="Model.Order"%>
@@ -120,11 +126,11 @@ CustomerDBContext cus = new CustomerDBContext();
                                                 if(list.get(i).getStatus() == 2){
                                                     
                                                     %>
-                                                    <button type="submit" class="btn btn-info btn-fill pull-right"><a href="checkinRoom.jsp?roomID=<%=list.get(i).getRoomID()%>" style="color: white">Checked In</a></button></td>
+                                                    <button type="submit" class="btn btn-info btn-fill pull-right"><a href="checkinRoom.jsp?roomID=<%=list.get(i).getOerderId()%>" style="color: white">Checked In</a></button></td>
                                                 <%}else if(list.get(i).getStatus() == 1){// da check doi check out
 
                                                     %>
-                                                <button type="submit" class="btn btn-info btn-fill pull-right"><a href="checkOutRoom.jsp?roomID=<%=list.get(i).getRoomID()%>" style="color: white">Checked Out</a></button></td>
+                                                <button type="submit" class="btn btn-info btn-fill pull-right"><a href="checkOutRoom.jsp?roomID=<%=list.get(i).getOerderId()%>" style="color: white">Checked Out</a></button></td>
 
                                                    <%}%>
                                             </tr>

@@ -1,3 +1,9 @@
+<%-- 
+    Document   : login
+    Created on : Mar 3, 2022, 10:24:54 AM
+    Author     : Admin
+--%>
+
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -24,7 +30,6 @@
             <div class="container">
                 <nav class="navbar navbar-expand-lg navbar-light">
                     <!-- Brand and toggle get grouped for better mobile display -->
-                    <a class="navbar-brand logo_h" href="index.html"><img src="image/Logo.png" alt=""></a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
@@ -32,24 +37,28 @@
                     </button>
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+
                     </div> 
                 </nav>
             </div>
         </header>
         <!--================Header Area =================-->
-
+        
+        
+        
         <!--================Breadcrumb Area =================-->
-        <section class="breadcrumb_area blog_banner_two">
+        <section class="breadcrumb_area">
             <div class="overlay bg-parallax" data-stellar-ratio="0.8" data-stellar-vertical-offset="0" data-background=""></div>
             <div class="container">
                 <div class="page-cover text-center">
                     <h1 class="page-cover-tittle">Welcome Admin</h1>
                     <h2 class="page-cover-tittle">---Login Admin---</h2>
-                    </ol>
+
                 </div>
             </div>
         </section>
         <!--================Breadcrumb Area =================-->
+
 
 
         <!--================Contact Area =================-->
@@ -60,10 +69,10 @@
                         <form class="row contact_form" action="LoginAdminServlet" method="post" id="contactForm">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" id="name" name="username" placeholder="Enter your user name">
+                                    <input type="text" class="form-control" id="name" required="" name="username" placeholder="Enter your user name">
                                 </div>
                                 <div class="form-group">
-                                    <input type="password" class="form-control" id="email" name="password" placeholder="Enter password">
+                                    <input type="password" class="form-control" required="" id="email" name="password" placeholder="Enter password">
                                 </div>
                                 <div class="col-md-12 text-right">
                                     <button type="submit" value="submit" class="btn theme_btn button_hover">Login</button>

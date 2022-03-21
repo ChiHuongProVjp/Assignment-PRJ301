@@ -43,12 +43,13 @@ public class AdminDBContext {
         try {
             con = cn.getConnectDB();
             PreparedStatement ps = con.prepareStatement(
-                    "SELECT [UserID],[password] FROM [BookingHotel].[dbo].[admin] WHERE [admin].[username] = '"+name+"' and [admin].[password] = '"+pass+"'");
-            ps.setString(1, name);
-            ps.setString(2, pass);
-
+                    "SELECT [username] FROM [dbo].[admin] WHERE [admin].[username] = '"+name+"' and [admin].[password] = '"+pass+"'");
+            
             ResultSet rs = ps.executeQuery();
-            status = rs.next();
+            if(rs.next()){
+              status = true;   
+            }
+            System.out.println("SELECT [username] FROM [dbo].[admin] WHERE [admin].[username] = '"+name+"' and [admin].[password] = '"+pass+"'");
         } catch (SQLException e) {
             System.out.println(e.getMessage());
         }

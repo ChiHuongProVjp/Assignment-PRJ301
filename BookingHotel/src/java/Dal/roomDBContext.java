@@ -222,7 +222,7 @@ public class roomDBContext {
     }
 
     public int updateStatusRoom(int idroom, int status) {
-        query = "UPDATE [dbo].[orders] SET [status] = " + status + " WHERE [orders].[roomId] = '" + idroom + "'";//query insert
+        query = "UPDATE [dbo].[orders] SET [status] = " + status + " WHERE [orders].[orderId] = '" + idroom + "'";//query insert
         //UPDATE [dbo].[tblProduct] SET [productName] = '"+product.getProductName()+"',[image] = '"+product.getImage()+"', [price]= '"+product.getPrice()+"', [quantity] = "+product.getQuantity()+", [catagoryID] = "+product.getCategoryID()+",[importDate]= '"+product.getImportDate()+"',[usingDate]= '"+product.getUsingDate()+"' WHERE productId = "+id+";"
         try {
             pst = con.prepareStatement(query);

@@ -1,3 +1,8 @@
+<%-- 
+    Document   : informationHotel
+    Created on : Mar 20, 2022, 1:09:55 PM
+    Author     : Admin
+--%>
 <%@page import="Dal.OrderDBContext"%>
 <%@page import="Model.Order"%>
 <%@page import="java.lang.Integer"%>
@@ -6,13 +11,13 @@
 <%@page import="Dal.roomDBContext"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%
-    if (session.getAttribute("ID") == null) {
-        response.sendRedirect("login.jsp");
-    } else {
-        int id = Integer.valueOf(session.getAttribute("ID").toString());
-        roomDBContext room = new roomDBContext();
-        OrderDBContext orderDBContext = new OrderDBContext();
-        ArrayList<Order> list = orderDBContext.loadOderByID(id);
+    if(session.getAttribute("ID")==null){
+    response.sendRedirect("login.jsp");
+    }else{
+    int id = Integer.valueOf(session.getAttribute("ID").toString());
+    roomDBContext room = new roomDBContext();
+    OrderDBContext orderDBContext = new OrderDBContext();
+    ArrayList<Order> list = orderDBContext.loadOderByID(id);
 %>
 <!DOCTYPE html>
 <html>
@@ -54,19 +59,19 @@
                             <li class="nav-item "><a class="nav-link" href="aboutUs.jsp">About us</a></li>
                             <li class="nav-item "><a class="nav-link" href="accomodation.jsp">Accomodation</a></li>
                             <li class="nav-item "><a class="nav-link" href="gallery.jsp">Gallery</a></li>
-                                <%
-                                    if (session.getAttribute("ID") == null) {
-                                %>
+                            <%
+                                if(session.getAttribute("ID")==null){
+                             %>
                             <li class="nav-item "><a class="nav-link" href="register.jsp">Register</a></li>
                             <li class="nav-item "><a class="nav-link" href="login.jsp">Login</a></li>
-                                <%
-                                } else {
-                                %>
+                            <%
+                                }else{
+                             %>
                             <li class="nav-item active"><a class="nav-link" href="historyBooking.jsp">History Booking</a></li>
                             <li class="nav-item "><a class="nav-link" href="login.jsp">Logout</a></li>
-                                <%
-                                    }
-                                %>
+                            <%
+                                }
+                             %>
                             <li class="nav-item "><a class="nav-link" href="contact.jsp">Contact</a></li>
                         </ul>
                     </div> 
@@ -91,93 +96,56 @@
             </div>
             <div class="whole-wrap">
                 <div class="container">
-
-                    <div class="section-top-border">
-                        <h3 class="mb-30 title_color">History</h3>
-                        <div class="progress-table-wrap">
-                            <div class="progress-table">
-                                <div class="table-head">
-                                    <div class="country">Room Image</div>
-                                    <div class="visit">Price</div>
-                                    <div class="visit">Date Check In</div>
-                                    <div class="visit">Date Check Out</div>
+                        
+                        <div class="section-top-border">
+                                <h3 class="mb-30 title_color">History</h3>
+                                <div class="progress-table-wrap">
+                                        <div class="progress-table">
+                                                <div class="table-head">
+                                                        <div class="country">Room Image</div>
+                                                        <div class="visit">Price</div>
+                                                        <div class="visit">Date Check In</div>
+                                                        <div class="visit">Date Check Out</div>
+                                                </div>
+                                                        <%
+                                                            for (int i = 0; i < list.size(); i++) {
+                                                        %>
+                                                <div class="table-row">
+                                                        <div class="country"> <img src="image/<%=room.getImage(list.get(i).getRoomID())%>.jpg" alt="flag"></div>
+                                                        <div class="serial"><%=list.get(i).getPrice()%></div>
+                                                        <div class="visit"><%=list.get(i).getDateArrival()%></div>
+                                                        <div class="visit"><%=list.get(i).getDateDeparture()%></div>
+                                                </div>
+                                                 <%
+                                                     }
+                                                 %>
+                                        </div>
                                 </div>
-                                <%
-                                    for (int i = 0; i < list.size(); i++) {
-                                %>
-                                <div class="table-row">
-                                    <div class="country"> <img src="image/<%=room.getImage(list.get(i).getRoomID())%>.jpg" alt="flag"></div>
-                                    <div class="serial"><%=list.get(i).getPrice()%></div>
-                                    <div class="visit"><%=list.get(i).getDateArrival()%></div>
-                                    <div class="visit"><%=list.get(i).getDateDeparture()%></div>
-                                </div>
-                                <%
-                                    }
-                                %>
-                            </div>
                         </div>
-                    </div>
                 </div>
-            </div>
+        </div>
         </section>
-        <!--================Banner Area =================-->
 
-
-        <!--================Contact Area =================-->
-        <section class="contact_area section_gap">
+        <!--================ About History Area  =================-->
+        <section class="about_history_area section_gap">
             <div class="container">
-                <div class="container-fluid">
-                </div>
                 <div class="row">
-                    <div class="col-md-3">
-                        <div class="contact_info">
-                            <div class="info_item">
-                                <i class="lnr lnr-home"></i>
-                                <h6>Ninh Binh, Nho Quan</h6>
-                                <p>177, Lê Thái Tổ, Xuân Thành, Khu biệt thự, Ninh Bình, Việt Nam</p>
-                            </div>
-                            <div class="info_item">
-                                <i class="lnr lnr-phone-handset"></i>
-                                <h6><a href="#">+84 24 38320320</a></h6>
-                                <p>Mon to Fri 9am to 6 pm</p>
-                            </div>
-                            <div class="info_item">
-                                <i class="lnr lnr-envelope"></i>
-                                <h6><a href="#">support@colorlib.com</a></h6>
-                                <p>Send us your query anytime!</p>
-                            </div>
+                    <div class="col-md-6 d_flex align-items-center">
+                        <div class="about_content ">
+                            <h2 class="title title_color">About Us <br>Our History<br>Mission & Vision</h2>
+                            <p>Ninh Binh Legend is a lovely hotel, in the heart of Ninh Bình. In addition to excellent transport 
+                                    links at the meeting point of the main metro line and tram line, our hotel is surrounded by the city centre’s elegant shops, cafés, 
+                                    restaurants, bars, Ninh Binh is the focus of many tourist attractions. Recently, our whole hotel has undergone a complete renovatio</p>
+                            <a href="#" class="button_hover theme_btn_two">Request Custom Price</a>
                         </div>
                     </div>
-                    <div class="col-md-9">
-                        <form class="row contact_form" action="contact_process.php" method="post" id="contactForm" novalidate="novalidate">
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name">
-                                </div>
-                                <div class="form-group">
-                                    <input type="email" class="form-control" id="email" name="email" placeholder="Enter email address">
-                                </div>
-                                <div class="form-group">
-                                    <input type="text" class="form-control" id="subject" name="subject" placeholder="Enter Subject">
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <textarea class="form-control" name="message" id="message" rows="1" placeholder="Enter Message"></textarea>
-                                </div>
-                            </div>
-                            <div class="col-md-12 text-right">
-                                <button type="submit" value="submit" class="btn theme_btn button_hover">Send Message</button>
-                            </div>
-                        </form>
+                    <div class="col-md-6">
+                        <img class="img-fluid" src="image/about_bg.jpg" alt="img">
                     </div>
                 </div>
             </div>
         </section>
-        <!--================Contact Area =================-->                               
-
-
-
+        <!--================ About History Area  =================-->
 
         <!--================ Facilities Area  =================-->
         <section class="facilities_area section_gap">
